@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Large Integer Multiplication</title>
+</head>
+<body>
+    <h2>Welcome to Multiplication Page</h2>
+
+    Multiplt two integers
+    <form action="/multiply" method="get">
+        Give an integer <input type="number" name="num1" id="">
+        Give another integer <input type="number" name="num2" id="">
+        <input type="submit" value="Click to multiply">
+    </form>
+
+    Multiplt two Large integers
+    <form action="/multiply/1" method="get">
+        Give an integer <input type="number" name="num1" id="">
+        Give another integer <input type="number" name="num2" id="">
+        <input type="submit" value="Click to multiply Large integers">
+    </form>
+
+    DB Product
+    <form action="/product/showByID" method="get">
+        Product ID
+        <input type="number" name="productID" id="">  
+        <input type="submit" value="Show the product">
+    </form>
+
+    <form action="/product/showAll" method="get">
+        Show All Product 
+        <input type="submit" value="Show all product">
+    </form>
+</body>
+</html>

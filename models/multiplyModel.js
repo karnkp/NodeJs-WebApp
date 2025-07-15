@@ -64,7 +64,7 @@ class Multiply{
     }
     static shiftLeft(x){ // multipied by 2
         var binaryX = (x+"").toString(2); //แปลงเป็นเลขฐาน2
-        binaryX = binaryX << 1; //ผลักไปขวา 1bit (bitหายไป1bit) = การหาร
+        binaryX = binaryX << 1; //เพิ่ม 1bit  = คูณ
         var decimalX = binaryX.toString(10); //แปลงเป็นเลขฐาน10
         return parseInt(decimalX);
     }

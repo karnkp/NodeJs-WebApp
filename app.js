@@ -8,7 +8,7 @@ app.use('/', homeRouter);
 
 app.set('view engine', 'ejs');
 const timeRouter = require('./routers/multiplyRouter');
-app.use('/multiply', timeRouter); //timeเรียกmultiplyRouter บอกMuliControlerทำงาน เรียกmodelมาคำนวน
+app.use('/multiply', timeRouter); //timeRouterเรียกmultiplyRouter บอกMultiControlerทำงาน เรียกmodelมาคำนวน
 
 const productRouter = require('./routers/dbProductRouter');
 app.use('/product', productRouter);

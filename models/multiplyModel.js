@@ -43,6 +43,10 @@ class Multiply{
     }
 
     //Russian Multiplication
+    static getRussuanMultiply(x, y){
+        var result = this.russianMultiplication(x, y);
+        return new Multiply(x, y, result);
+    }
     static russianMultiplication(n, m){
         var sum = 0;
         var n = parseInt(n);
@@ -57,14 +61,14 @@ class Multiply{
         return (m + sum) + ": Russian Multiplication"
     }
     static shiftRight(x){ //divded by 2
-        var binaryX = (x+"").toString(2); //แปลงเป็นเลขฐาน2 (10010)
-        binaryX = binaryX >> 1; //ผลักไปขวา 1bit (bitหายไป1bit) = การหาร
+        var binaryX = (x+"").toString(2); //แปลงเป็นเลขฐาน2 (1101)
+        binaryX = binaryX >> 1; //ผลักไปขวา 1bit (bitหายไป1bit) = การหาร (110)
         var decimalX = binaryX.toString(10); //แปลงเป็นเลขฐาน10
         return parseInt(decimalX);
     }
     static shiftLeft(x){ // multipied by 2
-        var binaryX = (x+"").toString(2); //แปลงเป็นเลขฐาน2
-        binaryX = binaryX << 1; //เพิ่ม 1bit  = คูณ
+        var binaryX = (x+"").toString(2); //แปลงเป็นเลขฐาน2 (1101)
+        binaryX = binaryX << 1; //เพิ่ม 1bit  = คูณ (11010)
         var decimalX = binaryX.toString(10); //แปลงเป็นเลขฐาน10 
         return parseInt(decimalX);
     }

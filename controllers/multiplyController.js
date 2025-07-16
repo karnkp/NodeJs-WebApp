@@ -13,8 +13,12 @@ exports.getBasicMultiply = (request, response) => {
 }
 
 exports.getAdvanceMultiply = (request, response) => {
-    const answer = Multiply.getLargeIntMultiply(request.query.num1, request.query.num2)
+    var answer;
+    if (request.params.multiplyMethod == "large"){
+        answer = Multiply.getLargeIntMultiply(request.query.num1, request.query.num2)
+    }else if (request.params.multiplyMethod == "russian"){
+        answer = Multiply.getRussuanMultiply(request.query.num1, request.query.num2)
+    }
+
     response.render('multiplyResult', {answer, me});
 }
-
-// add comment
